@@ -32,6 +32,7 @@
     transition: transform 0.5s ease, opacity 0.5s ease;
 
     @include respond(tab-port) {
+      width: 95%;
       display: flex;
       flex-direction: column-reverse;
     }
