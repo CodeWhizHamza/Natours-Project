@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+body {
+  padding: 3rem;
+
+  @include respond(phone) {
+    padding: 0;
+  }
+}
+
+html {
+  box-sizing: border-box;
+
+  // Default font size for page
+  // 1rem = 10px
+  font-size: 62.5%;
+
+  @include respond(tab-land) {
+    // 1rem = 9px
+    font-size: 56.25%;
+  }
+  @include respond(tab-port) {
+    // 1rem = 8px
+    font-size: 50%;
+  }
+  /* 
+  As the upper media queries apply to 
+  less width than 900px so we don't 
+  need phone media query 
+  */
+  // @include respond(phone) {
+  // }
+  @include respond(big-desktop) {
+    // 1rem = 12px
+    font-size: 75%;
+  }
+}
+
+::selection {
+  background-color: $light-green;
+  color: $white;
+}
